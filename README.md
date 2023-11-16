@@ -1,1 +1,1 @@
-# This is first phase of project where we just set up our DATABASE and CRUP operations using RESTful APIs
+# This is first phase part(a) of project where we just set up our DATABASE and CRUP operations using RESTful APIs

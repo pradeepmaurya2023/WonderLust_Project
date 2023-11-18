@@ -10,6 +10,9 @@ const mongoose = require('mongoose');
 // including method-override
 const methodOverride = require('method-override');
 
+// including ejs-mate for styling/creating template
+const ejsMate = require('ejs-mate');
+
 // importing models
 const Listing = require('./models/listing.js')
 
@@ -32,6 +35,12 @@ app.set('view engine', 'ejs');
 
 // setting path for views directory
 app.set('views', path.join(__dirname, 'views'));
+
+// setting path for public directory for static files
+app.use(express.static(path.join(__dirname,'public')));
+
+// use ejs-mate for all ejs templates:
+app.engine('ejs', ejsMate);
 
 // setting middleware for method-override
 app.use(methodOverride('_method'));
